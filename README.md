@@ -15,7 +15,7 @@ It is a chat room created in C. it can hadle upto 10 clients.
 Clone the project
 
 ```bash
-  git clone https://github.com/akash2819/Chit-Chat.git
+  https://github.com/akash2819/ChatAppInC.git
 ```
 
 Go to the project directory
