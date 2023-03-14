@@ -1,12 +1,29 @@
 window {
-	background-color: green;
+	background-color: #c9cfa9;
 }
 
-#my-box {
-    background-color: #c73616;
+button {
+    background-image: none;
 }
 
-
-#my-button {
-	background-color: red;
+#my-grid {
+	background-color: #c73616;
 }
+
+#my-btn{
+	color: white;
+	background-color: #048025;
+}
+
+.input{
+ 	background-color: #f0e399;
+}
+
+#my-scroll{
+	background-color:white;
+}
+
+#my-label{
+	color: blue;;
+}
+
