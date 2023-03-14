@@ -1,0 +1,29 @@
+window {
+	background-color: #c9cfa9;
+}
+
+button {
+    background-image: none;
+}
+
+#my-grid {
+	background-color: #c73616;
+}
+
+#my-btn{
+	color: white;
+	background-color: #048025;
+}
+
+.input{
+ 	background-color: #f0e399;
+}
+
+#my-scroll{
+	background-color:white;
+}
+
+#my-label{
+	color: blue;;
+}
+
