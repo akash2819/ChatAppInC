@@ -1,5 +1,5 @@
 
-PROG=myapp
+PROG=client
 
 CC=gcc
 LIBS= `pkg-config --libs gtk+-3.0`

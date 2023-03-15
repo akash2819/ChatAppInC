@@ -1,6 +1,7 @@
 #include<gtk/gtk.h>
 #include<string.h>
 
+
 typedef struct {
     GtkWidget *entry_widget;
     GtkWidget *box;
@@ -45,7 +46,7 @@ void load_css(){
 
 int main(int argc, char *argv[]) {
     	// Initialize GTK
-   	 gtk_init(&argc, &argv);
+   	 	gtk_init(&argc, &argv);
 
 
     	// Create a new window
@@ -90,32 +91,32 @@ int main(int argc, char *argv[]) {
     	gtk_style_context_add_class(gtk_widget_get_style_context(inputText), "input");	    
  
         // set the full width of the window
-	gtk_widget_set_hexpand(GTK_WIDGET(grid), TRUE);
+		gtk_widget_set_hexpand(GTK_WIDGET(grid), TRUE);
 
-	// set the btm to take up the full width of the grid
-	gtk_widget_set_hexpand(btn, TRUE);
-	gtk_widget_set_halign(btn, GTK_ALIGN_FILL);
+		// set the btm to take up the full width of the grid
+		gtk_widget_set_hexpand(btn, TRUE);
+		gtk_widget_set_halign(btn, GTK_ALIGN_FILL);
 
-	// set the inputText to take up the full width of the grid
-	gtk_widget_set_hexpand(inputText, TRUE);
-	gtk_widget_set_halign(inputText, GTK_ALIGN_FILL);
-
-
-	// set the scroll to take up the full width of the grid
-	gtk_widget_set_hexpand(scroll, TRUE);
-	gtk_widget_set_halign(scroll, GTK_ALIGN_FILL);
-
-	//Box to add labels
-	GtkWidget *boxl = gtk_box_new(GTK_ORIENTATION_VERTICAL, 10);
+		// set the inputText to take up the full width of the grid
+		gtk_widget_set_hexpand(inputText, TRUE);
+		gtk_widget_set_halign(inputText, GTK_ALIGN_FILL);
 
 
-	gtk_grid_attach(GTK_GRID(grid2), scroll, 0, 0, 1, 1);
+		// set the scroll to take up the full width of the grid
+		gtk_widget_set_hexpand(scroll, TRUE);
+		gtk_widget_set_halign(scroll, GTK_ALIGN_FILL);
+
+		//Box to add labels	
+		GtkWidget *boxl = gtk_box_new(GTK_ORIENTATION_VERTICAL, 10);
+
+
+		gtk_grid_attach(GTK_GRID(grid2), scroll, 0, 0, 1, 1);
     	gtk_grid_attach(GTK_GRID(grid), hbox, 0, 1, 1, 1);
         gtk_container_add(GTK_CONTAINER(scroll), boxl);		
 
-	//Since only one argument can be passed to g_signal_connect, we need a structure of pointers
+		//Since only one argument can be passed to g_signal_connect, we need a structure of pointers
     	Widgets widgets = { inputText, boxl };	
-	g_signal_connect(btn, "clicked",  G_CALLBACK(button_clicked), &widgets);
+		g_signal_connect(btn, "clicked",  G_CALLBACK(button_clicked), &widgets);
 
     	//gtk_grid_set_row_homogeneous(GTK_GRID(grid), FALSE);
     	//gtk_grid_set_column_homogeneous(GTK_GRID(grid), FALSE);    
@@ -123,16 +124,14 @@ int main(int argc, char *argv[]) {
     	gtk_box_pack_end(GTK_BOX(vbox), grid2, FALSE, FALSE, 0);
 
 
-	gtk_container_set_border_width(GTK_CONTAINER(btn), 10);		
+		gtk_container_set_border_width(GTK_CONTAINER(btn), 10);		
 	
-	// set the border width to 10 pixels
-	gtk_entry_set_has_frame(GTK_ENTRY(inputText), TRUE);
-	gtk_widget_set_margin_top(inputText, 10);
-	gtk_widget_set_margin_bottom(inputText, 10);
-	gtk_widget_set_margin_start(inputText, 10);
-	gtk_widget_set_margin_end(inputText, 10);
-
-
+		// set the border width to 10 pixels
+		gtk_entry_set_has_frame(GTK_ENTRY(inputText), TRUE);
+		gtk_widget_set_margin_top(inputText, 10);
+		gtk_widget_set_margin_bottom(inputText, 10);
+		gtk_widget_set_margin_start(inputText, 10);
+		gtk_widget_set_margin_end(inputText, 10);
 
     	//To close the window
     	g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
